@@ -1,0 +1,117 @@
+html {
+    background-image: url(bright_panels.jpg);
+    min-height: 500px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+
+    @media only screen and (max-width: 767px) {
+        html {
+           background-image: url(smaller-image.jpg);
+        }
+      }
+}
+
+
+body {
+    background: rgb(231, 227, 227);
+    font-family: sans-serif;
+    margin-right: 30px;
+}
+
+
+
+/* ********************* Top Navigation menu ********************************* */
+/* Add a background color to the top navigation */
+.topnav {
+    background-color: #18453b;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+    /* Add a color to the active/current link */
+    .topnav a:current {
+        background-color: #375248;
+        color: white;
+      }
+
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+
+
+/* *************************FAQ styling***************************************** */
+.faq-heading{
+   
+    border-bottom: #777;
+    padding: 20px 60px;
+}
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.hr-line{
+  width: 70%;
+  margin: auto;
+  
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    /* background-color: #eee; */
+    font-size: 110%;
+    color: #444;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 70%;
+    border-left-width: 10px;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+}
+.faq-body{
+    margin: auto;
+    text-align: left;
+    width: 50%; 
+    padding: auto;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.faq-page:hover {
+    background-color: #F9F9F9;
+}
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    padding: 0 18px;
+    background-color: rgb(249, 247, 247);
+    display: none;
+    overflow: hidden;
+}
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
