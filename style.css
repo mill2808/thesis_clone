@@ -12,11 +12,12 @@ body {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* ***************************** Top Navigation menu ********************************* */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #18453B;
+  background-color: #3d3d3d;
   color: white;
 }
 
@@ -65,7 +66,7 @@ body {
   border-radius: 10px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .toggle-button {
     display: flex;
   }
@@ -140,47 +141,14 @@ body {
   background-size: cover;
   background-position: center center;
 }
-
-/* ****************************** Body and border formatting ************************* */
-/*body {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 40px;
-    padding: 40px;
-    color: #242424;
-    border-top: 10px solid #242424;
-    background: rgb(255, 254, 254);
+ /* ******************************* main header styling***************************************** */
+.main-header{
+  padding: 0.25rem;
+  position: relative;
+  background-color: #18453B;
+  color: white;
 }
 
-
-/* ***************************** Top Navigation menu ********************************* */
-/* Add a background color to the top navigation */
-.topnav {
-    background-color: #18453b;
-    overflow: hidden;
-    min-width: 100%;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-    /* Add a color to the active/current link */
-    .topnav a:current {
-        background-color: #375248;
-        color: white;
-      }
-
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
 
 .body-text{
   padding: 1rem;
@@ -190,7 +158,7 @@ body {
 .faq-heading{
    
     border-bottom: #777;
-    padding: 20px 60px;
+    padding: 1rem 3rem;
 }
 .faq-container{
 display: flex;
@@ -200,7 +168,6 @@ flex-direction: column;
 .hr-line{
   width: 70%;
   margin: auto;
-  
 }
 /* Style the buttons that are used to open and close the faq-page body */
 .faq-page {
@@ -208,9 +175,9 @@ flex-direction: column;
     font-size: 110%;
     color: #444;
     cursor: pointer;
-    padding: 30px 20px;
+    padding: 3rem 2rem;
     width: 70%;
-    border-left-width: 10px;
+    border-left-width: 1rem;
     outline: none;
     transition: 0.4s;
     margin: auto;
@@ -228,7 +195,7 @@ flex-direction: column;
 }
 /* Style the faq-page panel. Note: hidden by default */
 .faq-body {
-    padding: 0 18px;
+    padding: 0 1.8rem;
     background-color: #fff;
     display: none;
     overflow: hidden;
@@ -236,10 +203,10 @@ flex-direction: column;
 .faq-page:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
+    font-size: 1.3rem;
     color: #777;
     float: right;
-    margin-left: 5px;
+    margin-left: 0.5rem;
 }
 .active:after {
     content: "\2796";
@@ -251,7 +218,7 @@ flex-direction: column;
 .resource-heading{
    
   border-bottom: #777;
-  padding: 20px 60px;
+  padding: 2rem 6rem;
 }
 .resource-container{
 display: flex;
@@ -269,9 +236,9 @@ margin: auto;
   font-size: 110%;
   color: #444;
   cursor: pointer;
-  padding: 30px 20px;
+  padding: 3rem 2rem;
   width: 70%;
-  border-left-width: 10px;
+  border-left-width: 1rem;
   outline: none;
   transition: 0.4s;
   margin: auto;
@@ -289,7 +256,7 @@ margin: auto;
 }
 /* Style the faq-page panel. Note: hidden by default */
 .resource-body {
-  padding: 0 18px;
+  padding: 0 1.8rem;
   background-color: #fff;
   display: none;
   overflow: hidden;
@@ -297,10 +264,10 @@ margin: auto;
 .resource-page:after {
   content: '\02795';
   /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
+  font-size: 1.3rem;
   color: #777;
   float: right;
-  margin-left: 5px;
+  margin-left: 0.5rem;
 }
 .active:after {
   content: "\2796";
