@@ -1,21 +1,10 @@
+/* ********************** Navbar Toggle Menu ******************************** */
+var toggleButton = document.getElementsByClassName('toggle-button')
+var navbarLinks = document.getElementsByClassName('navbar-links')
 
-var toggle = document.getElementsByClassName('toggle-button');
-var i;
-for (i = 0; i < toggle.length; i++) {
-    faq[i].addEventListener("click", function () {
-        /* Toggle between adding and removing the "active" class,
-        to highlight the button that controls the panel */
-        this.classList.toggle("active");
-        /* Toggle between hiding and showing the active panel */
-        var body = this.nextElementSibling;
-        if (body.style.display === "block") {
-            body.style.display = "none";
-        } else {
-            body.style.display = "block";
-        }
-    });
-}
-
+toggleButton.addEventListener('click', function() {
+    navbarLinks.classList.toggle('active')
+})
 
 
 
