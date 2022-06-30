@@ -146,3 +146,63 @@ flex-direction: column;
     /* Unicode character for "minus" sign (-) */
 }
 
+
+/* *******************************Resource page styling******************************* */
+.resource-heading{
+   
+  border-bottom: #777;
+  padding: 20px 60px;
+}
+.resource-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.hr-line{
+width: 70%;
+margin: auto;
+
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.resource-page {
+  /* background-color: #eee; */
+  font-size: 110%;
+  color: #444;
+  cursor: pointer;
+  padding: 30px 20px;
+  width: 70%;
+  border-left-width: 10px;
+  outline: none;
+  transition: 0.4s;
+  margin: auto;
+}
+.resource-body{
+  margin: auto;
+  text-align: left;
+  width: 50%; 
+  padding: auto;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.resource-page:hover {
+  background-color: #c8dad3;
+}
+/* Style the faq-page panel. Note: hidden by default */
+.resource-body {
+  padding: 0 18px;
+  background-color: #fff;
+  display: none;
+  overflow: hidden;
+}
+.resource-page:after {
+  content: '\02795';
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */
+}
