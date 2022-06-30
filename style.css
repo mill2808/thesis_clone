@@ -49,12 +49,12 @@ body {
 
 .toggle-button {
   position: absolute;
-  top: 0.75rem;
+  top: 1rem;
   right: 1rem;
   display: none;
-  flex-direction: none;
+  flex-direction: column;
   justify-content: space-between;
-  width: 30px;
+  width: 31px;
   height: 21px;
 }
 
