@@ -1,34 +1,66 @@
 html {
-    background-image: url(bright_panels.jpg);
-    min-height: 500px;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    
-
-    @media only screen and (max-width: 767px) {
-        html {
-           background-image: url(smaller-image.jpg);
-        }
-      }
+  background: #e3e3e3;
 }
 
+/* ****************************** Header image formatting ************************* */
 
+.index-header {
+  min-width: 100%;
+  height: 300px;
+  background: url('bright_panels.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.calculator-header {
+  min-width: 100%;
+  height: 300px;
+  background: url('cows_grazing.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.funding-header {
+  min-width: 100%;
+  height: 300px;
+  background: url('sunset_panels.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.resources-header {
+  min-width: 100%;
+  height: 300px;
+  background: url('roof_panels.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.questions-header {
+  min-width: 100%;
+  height: 300px;
+  background: url('bright_panels.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+/* ****************************** Body and border formatting ************************* */
 body {
-    background: rgb(231, 227, 227);
-    font-family: sans-serif;
-    margin-right: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 40px;
+    padding: 40px;
+    color: #242424;
+    border-top: 10px solid #242424;
+    background: #fff;
 }
 
 
-
-/* ********************* Top Navigation menu ********************************* */
+/* ***************************** Top Navigation menu ********************************* */
 /* Add a background color to the top navigation */
 .topnav {
     background-color: #18453b;
     overflow: hidden;
-    width: 100%;
+    min-width: 100%;
   }
   
   /* Style the links inside the navigation bar */
@@ -54,8 +86,7 @@ body {
   }
 
 
-
-/* *************************FAQ styling***************************************** */
+/* *******************************FAQ styling***************************************** */
 .faq-heading{
    
     border-bottom: #777;
@@ -93,12 +124,12 @@ flex-direction: column;
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .faq-page:hover {
-    background-color: #F9F9F9;
+    background-color: #c8dad3;
 }
 /* Style the faq-page panel. Note: hidden by default */
 .faq-body {
     padding: 0 18px;
-    background-color: rgb(249, 247, 247);
+    background-color: #fff;
     display: none;
     overflow: hidden;
 }
