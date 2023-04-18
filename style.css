@@ -272,3 +272,118 @@ margin: auto;
   content: "\2796";
   /* Unicode character for "minus" sign (-) */
 }
+
+/* ***************************** Calculator Styling ********************************* */
+
+
+
+#farmerForm {
+  padding: 10px;
+  border: 5px solid #a9a9a9;
+  border-radius: 10px;
+  margin: 20px;
+  }
+  
+  input[type=text] {
+    padding: 5px;
+  }
+  input[type=text]:focus {
+    border: 3px solid #ccc;
+  }
+  
+  button {
+    /* remove default behavior */
+    appearance:none;
+    -webkit-appearance:none;
+    /* usual styles */
+    padding:10px;
+    border:none;
+    background-color:#18453B;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    width:100%;
+  }
+  
+  .underline:hover {
+      text-decoration: underline;
+  }
+  
+  
+  .table-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+  }
+  
+  .table1 {
+    width: 50%;
+  }
+  
+  .table2 {
+    width: 50%;
+  }
+  @media screen and (max-width: 900px) {
+    .table-container1 {
+      flex-direction: column;
+    }
+    
+    .table1 {
+      width: 100%;
+    }
+    
+    .table2 {
+      width: 100%;
+    }
+  }
+  
+  .table-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+  }
+  
+  .table3 {
+    width: 50%;
+  }
+  
+  .table4 {
+    width: 50%;
+  }
+  @media screen and (max-width: 900px) {
+    .table-container2 {
+      flex-direction: column;
+    }
+    
+    .table3 {
+      width: 100%;
+    }
+    
+    .table4 {
+      width: 100%;
+    }
+  }
+  
+  table {
+    width:600px;
+    border: 1px;
+    padding: 5px;
+  }
+  
+  th {
+    color: white;
+    background: #8bca84;
+    text-align: center;
+    padding: 7px;
+    height: 25px;
+    font-size: 20px;
+  }
+  
+  td {
+    border: 1px solid #a9a9a9;
+    width: 33%;
+    padding: 5px;
+  }
+  tr:hover {
+    background-color: #DADEDF;
+  }
