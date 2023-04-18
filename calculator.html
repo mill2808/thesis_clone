@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Economic Feasibility Analysis</title>
 </head>
 <body>
@@ -34,47 +35,165 @@
         <p>Solar for Dairy is a program designed to help dairy farmers in Michigan explore the potential of 
             installing solar panels on their farm structures and non-arable farmland.
         </p>
-        </div>
-
-    <div class="body-text">
-    <section>
-        <h3>Solar Cost Calculator</h3>
-        <form> <h4> Please Answer the Following Questions About Your Farm</h4>
-            <p><label> Which region of Michigan is your farm located?
-                <select>
-                    <option value="Northern Michigan">Northern Michigan</option>
-                    <option value="Western Michigan">Western Michigan</option>
-                    <option value="Central Michigan">Central Michigan</option>
-                    <option value="Southeast Michigan">Southeast Michigan</option>
-                    <option value="Upper Peninsula">Upper Peninsula</option>
-                  </select>
-            <p><label>How much electricity does your farm consume per year? (kWh)
-                <input type="text"> </p>
-            </label>
-            <p><label> What percentage of your electricity consumption do you want to be covered by solar?
-                <select>
-                        <option value="0.10">10%</option>
-                        <option value="0.20">20%</option>
-                        <option value="0.30">30%</option>
-                        <option value="0.40">40%</option>
-                        <option value="0.50">50%</option>
-                        <option value="0.60 ">60%</option>
-                        <option value="0.70">70%</option>
-                        <option value="0.80">80%</option>
-                        <option value="0.90 ">90%</option>
-                        <option value="1.0 ">100%</option>
-                      </select>
-                </label> </p>
-            <p><label> Email Address
-                <input type="text">
-            </label> </p>
-            <p><label> Comments
-                <input type="text">
-            </label> </p>
-            <p><button>Submit</button></p>
-        </form>
-    </section>
     </div>
-    <script src="main.js"></script>
+     
+        <h3>Solar Cost Calculator</h3>
+ <div id="farmerForm">
+<h2> Please answer the following questions about your farm in number format (i.e., type "10" not "ten"): </h2>
+ <p><label>How many cows do you milk on your farm?
+      <input id="numberOfCows" type="text" style="padding-right:20px; text-align:center;">   </input><span style="margin-left:-40px; color: #5f5f5f">cows</span></label> </p>
+  <p><label>How much East, West, or South-facing space is available for solar panels on your farm?
+           <input id="squareFeet" type="text" style="padding-right:20px; text-align:center;"></input><span style="margin-left:-50px; color: #5f5f5f">sq feet</span></label> </p>
+  <p><label>What percentage of your electricity consumption do you want to be covered by solar?
+              <input type="text" id="percent" style="padding-right:20px; text-align:center;"></input><span style="margin-left:-25px; color: #5f5f5f">%</span></label> </p>
+
+<span style="color: #18453B; font-weight: bold; font-size: 19px;"> The following questions are optional. If you do not answer the questions below, default numbers will be used based on the size of your farm.</span>
+
+  <p><label>How much electricity does your farm use per year?
+              <input type="text" id="annualElectricityInput" style="padding-right:30px; text-align:center;"></input><span style="margin-left:-70px; color: #5f5f5f">kWh/year</span></label> </p>
+  <p><label>If you take out a loan to help pay for solar panel installation, what percent of the installation cost do you want it to cover?
+              <input type="text" id="loanPercentageInput" style="padding-right:20px; text-align:center;"></input><span style="margin-left:-25px; color: #5f5f5f">%</span></label> </p>
+  <p><label>If you take out a loan, what is the maximum amount you could pay per year?
+              <input type="text" id="loanPaymentInput" style="padding-right:20px; text-align:center;"></input><span style="margin-left:-50px; color: #5f5f5f">$/year</span></label> </p>
+<p><label>If you take out a loan, what would the interest rate be?
+              <input type="text" id="loanInterestInput" style="padding-right:20px; text-align:center;"></input><span style="margin-left:-25px; color: #5f5f5f">%</span></label> </p>
+  <p><label>If you take out a loan, after how many years do you want the loan to be paid off?
+              <input type="text" id="loanDurationInput" style="padding-right:20px; text-align:center;"></input><span style="margin-left:-45px; color: #5f5f5f">years</span></label> </p>
+
+  <button onClick="returnText()">Submit</button>
+</div>
+
+<h1> Calculation Results </h1>
+<p>For more information about each value, hover over a row in the table!</p>
+<div class="table-container1">
+<table class="table1">
+  <th colspan="3">User Input</th>
+  <tr title="The number of cows is used to determine how much energy your farm needs to generate per year."> 
+    <td>Number of Cows</td>
+    <td><span id="result1"></span></td>
+    <td>cows</td>
+  </tr>
+  <tr title="The square footage of roof and non-arable land determines what size of panels and how many panels can be used to generate the electricity needed."> 
+    <td>Square Feet Available</td>
+    <td><span id="result2"></span></td>
+    <td>square feet</td>
+  </tr>
+    <tr title="This is the percent of your electricity use that you would like to generate using solar panels."> 
+    <td>Percent Generated</td>
+    <td><span id="result3"></span></td>
+    <td>%</td>
+  </tr>
+  </table>
+
+  <table class=table2>
+  <th colspan="3">Energy Generation</th>
+    <tr title="This value is how much electricity your farm consumes per year. If you typed in an answer, the value should be the same. If not, the electricity consumed is based on the number of cows on your farm. If this value does not seem accurate, please reload the page and try an estimate that is based on your electric bill."> 
+    <td>Annual Electricity Consumption</td>
+    <td><span id="result4"></span></td>
+    <td>kWh/year</td>
+  </tr>
+  <tr title="This value is the amount of electricity your solar panels with generate each year. This is the electricity consumed times the percentage of consumption that you want the solar panels to cover."> 
+    <td>Annual Electricity Generation</td>
+    <td><span id="result5"></span></td>
+    <td>kWh/year</td>
+  </tr>
+    <tr title="This value is an average of how much electricity your panels will generate per hour, based on the average number of peak sunlight hours per day in Michigan."> 
+    <td>Hourly Solar Panel Generation</td>
+    <td><span id="result6"></span></td>
+    <td>kWh</td>
+  </tr>
+  </table>
+    </div>
+
+<div class="table-container2">
+<table class=table3>
+  <th colspan="4">System Specifications</th>
+      <tr title="Panel configuration is the square footage that your solar panel array will use on your roof and/or non-arable land."> 
+    <td>Total Panel Configuration</td>
+    <td><span id="result11"></span></td>
+    <td>square feet</td>
+  </tr>
+  <tr title="This is the number of panels in your configuration, as well as the size of each panel (in Watts)."> 
+    <td>Number of Panels</td>
+    <td><span id="result12"></span></td>
+    <td><span id="result13"></span> Watt panels</td>
+  </tr>
+  <tr title="The size of your solar panel array is the number of panels times the size of each panel."> 
+    <td>System Size</td>
+    <td><span id="result14"></span></td>
+    <td>Watts</td>
+  </tr>
+    <tr title="This value is an estimate of how much it will cost to install your solar panel array. This value is based on the cost estimates provided by the NREL Cost Benchmarks 2021 "> 
+    <td>Cost of Installation</td>
+    <td><span id="result15"></span></td>
+    <td>dollars</td>
+  </tr>
+  </table>
+<table class=table4>
+  <th colspan="4">Economic Evaluation Criteria</th>
+    <tr title="The payback period is the time it takes for the project to generate enough benefits each year to cover its cost of installation. In this case, the benefits are your annual savings based on what you would normally pay for electricity."> 
+    <td>Payback Period</td>
+    <td><span id="result16"></span></td>
+    <td>years</td>
+  </tr>
+  <tr title="The net present value (NPV) is the present value of all benefits minus the present value of all costs over the lifespan of the panels. The lifespan of your solar panels is estimated to be 25 years. It is generally considered to be a good investment if your NPV is greater than 0."> 
+    <td>Net Present Value</td>
+    <td><span id="result17"></span></td>
+    <td>dollars</td>
+  </tr>
+    <tr title="The equivalent annual worth (EAW) looks at the lifetime of the solar panels, and estimates the benefits of your project each year. It is generally considered to be a good investment if your EAW is greater than 0."> 
+    <td>Equivalent Annual Worth</td>
+    <td><span id="result19"></span></td>
+    <td>dollars</td>
+  </tr>
+      <tr title="The benefit to cost ratio (B/C) is the present value of all beenfits divided by the present value of all costs. It is generally considered to be a good investment if your B/C is greater than 1."> 
+    <td>Benefit to Cost Ratio</td>
+    <td><span id="result22"></span></td>
+    <td>-</td>
+  </tr>
+  </table>
+    </div>
+
+
+<h3>Cumulative Cash Flow Over the Lifetime of the Solar Panels</h3>
+<canvas id="cashFlowChart" width="300" height="100"></canvas>
+
+<h3>Comparison of Different Federal Tax Credit Rates (percent of installation cost)</h3>
+<canvas id="taxCreditCashFlowChart" width="300" height="100"></canvas>
+
+<table class=table5>
+  <th colspan="5">Loan Information</th>
+    <tr> 
+    <td>Loan Amount (Principal)</td>
+    <td><span id="result23"></span></td>
+    <td>dollars</td>
+  </tr>
+  <tr> 
+    <td>Loan Interest Rate</td>
+    <td><span id="result24"></span></td>
+    <td>%</td>
+  </tr>
+    <tr> 
+    <td>Time to Pay Off</td>
+    <td><span id="result25"></span></td>
+    <td>years</td>
+  </tr>
+      <tr> 
+    <td>Annual Loan Payment</td>
+    <td><span id="result26"></span></td>
+    <td>dollars/year</td>
+  </tr>
+        <tr> 
+    <td>Monthly Loan Payment</td>
+    <td><span id="result27"></span></td>
+    <td>dollars/month</td>
+  </tr>
+  </table>
+
+
+<h3>Loan Schedule</h3>
+<canvas id="loanChart" width="300" height="100"></canvas>
+
+    <script src="calculator.js"></script>
 </body>
 </html>
