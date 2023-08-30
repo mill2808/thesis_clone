@@ -393,20 +393,27 @@ margin: auto;
   /*************************** Funding Page Styling ********************************/
   /* Default table styles */
 .funding-table {
-  padding: 5px;
+  padding: 10;
   width: 100%;
   border-collapse: collapse;
   border: 1px solid #ccc;
   margin-bottom: 20px;
 }
 
-.funding-table th,
+.funding-table th{
+  padding: 10px;
+  text-align: center;
+  width: 20%;
+}
+
 .funding-table td {
   padding: 10px;
   text-align: left;
   width: 20%;
 }
-
+.funding-table tbody tr:hover {
+  background-color: transparent;
+}
 /* Responsive styles */
 @media (max-width: 768px) {
   .funding-table th,
@@ -427,7 +434,7 @@ margin: auto;
   }
     /* Apply shaded background to column one */
     .shaded-column {
-      background-color: #8bca84; /* Define the shade color you want */
+      background-color: #c9ccc8; /* Define the shade color you want */
     }
       /* Hide the first row */
   .hide-row {
