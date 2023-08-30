@@ -139,7 +139,7 @@ body {
   background-size: cover;
   background-position: center center;
 }
- /* ******************************* Main header styling***************************************** */
+ /* ******************************* Main header styling ********************************** */
 .main-header{
   padding: 0.5rem;
   position: relative;
@@ -187,7 +187,7 @@ flex-direction: column;
     width: 50%; 
     padding: auto;
 }
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* Adds a background color to the button if it is clicked on (added the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .faq-page:hover {
     background-color: #c8dad3;
@@ -275,7 +275,9 @@ margin: auto;
 
 /* ***************************** Calculator Styling ********************************* */
 
-
+#calculatorHeader {
+  padding: 5px;
+}
 
 #farmerForm {
   padding: 10px;
