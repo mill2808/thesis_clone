@@ -248,6 +248,21 @@ margin: auto;
   width: 50%; 
   padding: auto;
 }
+
+.resource-list {
+  list-style-type: none; /* Use disc bullets (default) */
+  /* You can also use other values like circle, square, etc. */
+  /* list-style-type: circle; */
+  /* list-style-type: square; */
+  /* list-style-type: none; to remove bullets */
+  padding: 10px;
+}
+
+.resource-list li {
+  padding: 5px;
+}
+
+
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .resource-page:hover {
