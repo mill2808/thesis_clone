@@ -56,7 +56,7 @@ function returnText() {
   const interestRate = 0.03; // 3%
   const salvageValue = 0; // assumed value after 25 years
   let annualDepreciation = (installationCost-salvageValue)/lifespan; //straightline depreciation
-  let annualInsurance = installationCost*(0.25/100); 
+  let annualInsurance = installationCost*0.0025; 
   const annualDegradation = 0.005; //.5% per year
   const annualMaintenance = 17*systemSize/1000; //maintenance cost per year
   const taxCredit30 = 0.3*installationCost; //30% of installation cost occurring in year 1
