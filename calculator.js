@@ -58,11 +58,11 @@ function returnText() {
   let annualDepreciation = (installationCost-salvageValue)/lifespan; //straightline depreciation
   let annualInsurance = installationCost*(0.25/100); 
   const annualDegradation = 0.005; //.5% per year
-  const annualMaintenance = 2800; //maintenance cost per year
+  const annualMaintenance = 17*systemSize/1000; //maintenance cost per year
   const taxCredit30 = 0.3*installationCost; //30% of installation cost occurring in year 1
   const taxCredit15 = 0.15*installationCost; // 15% of install cost year 1
   const taxCredit0 = 0*installationCost; //no tax credit year 1
-  
+  alert = annualMaintenance;
   //// yearly electricity rates increasing by 2.96% per year ///////////////////////////////
     let electricityRate1 = 0.16;
     let electricityRate2 = 1.0296*electricityRate1;
