@@ -63,32 +63,32 @@ function returnText() {
   const taxCredit15 = 0.15*installationCost; // 15% of install cost year 1
   const taxCredit0 = 0*installationCost; //no tax credit year 1
   
-  //// yearly electricity rates increasing by 2.3% per year ///////////////////////////////
+  //// yearly electricity rates increasing by 2.96% per year ///////////////////////////////
     let electricityRate1 = 0.16;
-    let electricityRate2 = 1.023*electricityRate1;
-    let electricityRate3 = 1.023*electricityRate2;
-    let electricityRate4 = 1.023*electricityRate3;
-    let electricityRate5 = 1.023*electricityRate4;
-    let electricityRate6 = 1.023*electricityRate5;
-    let electricityRate7 = 1.023*electricityRate6;
+    let electricityRate2 = 1.0296*electricityRate1;
+    let electricityRate3 = 1.0296*electricityRate2;
+    let electricityRate4 = 1.0296*electricityRate3;
+    let electricityRate5 = 1.0296*electricityRate4;
+    let electricityRate6 = 1.0296*electricityRate5;
+    let electricityRate7 = 1.0296*electricityRate6;
     let electricityRate8 = 1.023*electricityRate7;
-    let electricityRate9 = 1.023*electricityRate8;
-    let electricityRate10 = 1.023*electricityRate9;
-    let electricityRate11 = 1.023*electricityRate10;
-    let electricityRate12 = 1.023*electricityRate11;
-    let electricityRate13 = 1.023*electricityRate12;
-    let electricityRate14 = 1.023*electricityRate13;
-    let electricityRate15 = 1.023*electricityRate14;
-    let electricityRate16 = 1.023*electricityRate15;
-    let electricityRate17 = 1.023*electricityRate16;
-    let electricityRate18 = 1.023*electricityRate17;
-    let electricityRate19 = 1.023*electricityRate18;
-    let electricityRate20 = 1.023*electricityRate19;
-    let electricityRate21 = 1.023*electricityRate20;
-    let electricityRate22 = 1.023*electricityRate21;
-    let electricityRate23 = 1.023*electricityRate22;
-    let electricityRate24 = 1.023*electricityRate23;
-    let electricityRate25 = 1.023*electricityRate24;
+    let electricityRate9 = 1.0296*electricityRate8;
+    let electricityRate10 = 1.0296*electricityRate9;
+    let electricityRate11 = 1.0296*electricityRate10;
+    let electricityRate12 = 1.0296*electricityRate11;
+    let electricityRate13 = 1.0296*electricityRate12;
+    let electricityRate14 = 1.0296*electricityRate13;
+    let electricityRate15 = 1.0296*electricityRate14;
+    let electricityRate16 = 1.0296*electricityRate15;
+    let electricityRate17 = 1.0296*electricityRate16;
+    let electricityRate18 = 1.0296*electricityRate17;
+    let electricityRate19 = 1.0296*electricityRate18;
+    let electricityRate20 = 1.0296*electricityRate19;
+    let electricityRate21 = 1.0296*electricityRate20;
+    let electricityRate22 = 1.0296*electricityRate21;
+    let electricityRate23 = 1.0296*electricityRate22;
+    let electricityRate24 = 1.0296*electricityRate23;
+    let electricityRate25 = 1.0296*electricityRate24;
   //// yearly electricity generation factoring in degradation ///////////////////////////
     let generation1 = annualGeneration;
     let generation2 = generation1*(1-annualDegradation);
