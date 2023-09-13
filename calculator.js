@@ -47,8 +47,8 @@ function returnText() {
     
   //// Cost of installation //////////////////////////////////////
   let systemSize = numberPanels * panelWattage;
-  let costPerWatt = 1.79;
-    //let costPerWatt = (systemSize<="350000") ? "1.56":"1.64"; //FIX THESE NUMBERS
+  //let costPerWatt = 1.84;
+    let costPerWatt = (systemSize<="20000") ? "2.95":"1.84"; 
   let installationCost = systemSize * costPerWatt;
   
   //// Economic Equations Values ////////////////////////////////
@@ -62,7 +62,7 @@ function returnText() {
   const taxCredit30 = 0.3*installationCost; //30% of installation cost occurring in year 1
   const taxCredit15 = 0.15*installationCost; // 15% of install cost year 1
   const taxCredit0 = 0*installationCost; //no tax credit year 1
-  alert = annualMaintenance;
+  
   //// yearly electricity rates increasing by 2.96% per year ///////////////////////////////
     let electricityRate1 = 0.16;
     let electricityRate2 = 1.0296*electricityRate1;
