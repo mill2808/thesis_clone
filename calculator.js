@@ -293,10 +293,6 @@ function returnText() {
     
   ////// Loan Calculations /////////////////////////////////////////////////////////////////////
     
-   //     let annualLoanPayment = document.getElementById('loanPaymentInput').value;
-    //if (annualLoanPayment === '') {
-    //  annualLoanPayment = 100; //// ?????????????????????
-   // }
     let loanAmount = (loanPercentage *0.01) * installationCost; // principal
     let yearlyPayment = (loanAmount*loanInterestRate) / ((1-(1+loanInterestRate)**(-loanDuration)));
     let monthlyPayment = yearlyPayment / 12;
