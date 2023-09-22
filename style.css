@@ -214,11 +214,10 @@ flex-direction: column;
 
 
 /* *******************************Resource page styling****************** */
-.resource-heading{
-   
-  border-bottom: #777;
-  padding: 1rem 1rem;
+#resourceHeader {
+padding: 1rem; 
 }
+
 .resource-container{
 display: flex;
 justify-content: center;
@@ -396,7 +395,7 @@ margin: auto;
   }
 
   /*************************** Funding Page Styling *************************/
-  /* Default table styles */
+ 
 
 #bodyOfFunding {
   padding:10px;
