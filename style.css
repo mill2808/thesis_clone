@@ -226,11 +226,10 @@ flex-direction: column;
 .hr-line{
 width: 70%;
 margin: auto;
-
 }
-/* Style the buttons that are used to open and close the faq-page body */
+
+/* Styling the buttons that are used to open and close the  body */
 .resource-page {
-  /* background-color: #eee; */
   font-size: 100%;
   color: #444;
   cursor: pointer;
