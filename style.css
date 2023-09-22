@@ -217,7 +217,7 @@ flex-direction: column;
 .resource-heading{
    
   border-bottom: #777;
-  padding: 2rem 6rem;
+  padding: 1rem 1rem;
 }
 .resource-container{
 display: flex;
@@ -232,10 +232,10 @@ margin: auto;
 /* Style the buttons that are used to open and close the faq-page body */
 .resource-page {
   /* background-color: #eee; */
-  font-size: 110%;
+  font-size: 100%;
   color: #444;
   cursor: pointer;
-  padding: 3rem 2rem;
+  padding: 2rem 1rem;
   width: 70%;
   border-left-width: 1rem;
   outline: none;
@@ -245,32 +245,18 @@ margin: auto;
 .resource-body{
   margin: auto;
   text-align: left;
-  width: 50%; 
+  width: 60%; 
   padding: auto;
 }
 
-.resource-list {
-  list-style-type: none; /* Use disc bullets (default) */
-  /* You can also use other values like circle, square, etc. */
-  /* list-style-type: circle; */
-  /* list-style-type: square; */
-  /* list-style-type: none; to remove bullets */
-  padding: 10px;
-}
-
-.resource-list li {
-  padding: 5px;
-}
-
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* Adds a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .resource-page:hover {
   background-color: #c8dad3;
 }
-/* Style the faq-page panel. Note: hidden by default */
+/* Style the resource panel. Note: hidden by default */
 .resource-body {
-  padding: 0 1.8rem;
+  padding: 0 1rem;
   background-color: #fff;
   display: none;
   overflow: hidden;
@@ -279,7 +265,7 @@ margin: auto;
   content: '\02795';
   /* Unicode character for "plus" sign (+) */
   font-size: 1.3rem;
-  color: #777;
+  color: #585757;
   float: right;
   margin-left: 0.5rem;
 }
@@ -288,7 +274,7 @@ margin: auto;
   /* Unicode character for "minus" sign (-) */
 }
 
-/* ***************************** Calculator Styling************************* */
+/* ***************************** Calculator Styling***************** */
 
 #bodyOfCalculator {
   padding: 10px;
