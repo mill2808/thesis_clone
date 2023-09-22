@@ -288,7 +288,11 @@ margin: auto;
   /* Unicode character for "minus" sign (-) */
 }
 
-/* ***************************** Calculator Styling ********************************* */
+/* ***************************** Calculator Styling************************* */
+
+#bodyOfCalculator {
+  padding: 10px;
+}
 
 #calculatorHeader {
   padding: 5px;
@@ -407,7 +411,12 @@ margin: auto;
 
   /*************************** Funding Page Styling ********************************/
   /* Default table styles */
-.funding-table {
+
+#bodyOfFunding {
+  padding:10px;
+}
+
+  .funding-table {
   padding: 10;
   width: 100%;
   border-collapse: collapse;
