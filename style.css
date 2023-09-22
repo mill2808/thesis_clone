@@ -213,7 +213,7 @@ flex-direction: column;
 }
 
 
-/* *******************************Resource page styling******************************* */
+/* *******************************Resource page styling****************** */
 .resource-heading{
    
   border-bottom: #777;
@@ -409,7 +409,7 @@ margin: auto;
     background-color: #DADEDF;
   }
 
-  /*************************** Funding Page Styling ********************************/
+  /*************************** Funding Page Styling *************************/
   /* Default table styles */
 
 #bodyOfFunding {
