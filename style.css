@@ -442,7 +442,7 @@ margin: auto;
   }
     /* Apply shaded background to column one */
     .shaded-column {
-      background-color: #c9ccc8; /* Define the shade color you want */
+      background-color: #d0d2d0; /* Define the shade color you want */
     }
       /* Hide the first row */
   .hide-row {
