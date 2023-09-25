@@ -1,6 +1,6 @@
 //// User inputs //////////////////////////////////////////////
 function returnText() {
-                                                    
+             
     let numberCows = document.getElementById('numberOfCows').value;
     let squareFeet = document.getElementById('squareFeet').value;
     let percent = document.getElementById('percent').value;

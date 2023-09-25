@@ -185,7 +185,6 @@ flex-direction: column;
     margin: auto;
     text-align: left;
     width: 50%; 
-    padding: auto;
 }
 /* Adds a background color to the button if it is clicked on (added the .active class with JS), and when you move the mouse over it (hover) */
 .active,
@@ -244,7 +243,6 @@ margin: auto;
   margin: auto;
   text-align: left;
   width: 60%; 
-  padding: auto;
 }
 
 /* Adds a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -407,7 +405,7 @@ margin: auto;
 }
 
   .funding-table {
-  padding: 10;
+  padding: 5px;
   width: 100%;
   border-collapse: collapse;
   border: 1px solid #ccc;
