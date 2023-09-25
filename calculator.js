@@ -608,16 +608,16 @@ window.addEventListener('resize', () => {
 
 
   //loan graph
-  const canvas = document.getElementById('loanChart');
-  const container = document.getElementById('loanChartContainer');
+  //const canvas = document.getElementById('loanChart');
+  //const container = document.getElementById('loanChartContainer');
 
 // Set initial height based on 50% of the width
-  canvas.style.height = `${(loanChartContainer.offsetWidth * 0.2)}px`;
+ // canvas.style.height = `${(loanChartContainer.offsetWidth * 0.2)}px`;
 
-window.addEventListener('resize', () => {
+//window.addEventListener('resize', () => {
     // Update height when window is resized
-    canvas.style.height = `${(loanChartContainer.offsetWidth * 0.2)}px`;
-});
+   //canvas.style.height = `${(loanChartContainer.offsetWidth * 0.2)}px`;
+//});
     
 
 
