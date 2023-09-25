@@ -28,7 +28,6 @@ function returnText() {
   
   
   //// Energy generation /////////////////////////////////////////
-  //let annualElectricityConsumption = 991.283*numberCows**0.932; // regression equation
     //let annualElectricityConsumption = 110332; //kWh
   let annualGeneration = (percent/100)*annualElectricityConsumption;
   let hourlyGeneration = annualGeneration*(1/365)*(1/24);
@@ -423,6 +422,7 @@ function returnText() {
       data: cashFlowData,
       options: {
         responsive: true,
+        //maintainAspectRatio: false,
         scales: {
          x: {
           display: true,
@@ -498,6 +498,7 @@ function returnText() {
       data: taxCreditData,
       options: {
         responsive: true,
+       //maintainAspectRatio: false,
         scales: {
          x: {
           display: true,
@@ -556,6 +557,7 @@ function returnText() {
       },
       options: {
         responsive: true, 
+        //maintainAspectRatio: false,
         scales: {
                  x: {
                   display: true,

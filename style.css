@@ -282,7 +282,7 @@ margin: auto;
   padding: 5px;
 }
 
-#farmerForm {
+  #farmerForm {
   padding: 10px;
   border: 5px solid #a9a9a9;
   border-radius: 10px;
@@ -314,7 +314,10 @@ margin: auto;
       text-decoration: underline;
   }
   
-  
+  canvas {
+    width: 100%; /* or any percentage you prefer */
+    height: auto;
+}
   .table-container1 {
     display: flex;
     flex-wrap: wrap;
