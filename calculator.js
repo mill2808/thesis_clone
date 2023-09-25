@@ -593,8 +593,17 @@ function returnText() {
       }
   });
     
-    
-    
+  // Make graphs readable on phone screens 
+  const canvas = document.getElementById('loanChart');
+  const container = document.getElementById('loanChartContainer');
+
+// Set initial height based on 50% of the width
+  canvas.style.height = `${(loanChartContainer.offsetWidth * 0.5)}px`;
+
+window.addEventListener('resize', () => {
+    // Update height when window is resized
+    canvas.style.height = `${(loanChartContainer.offsetWidth * 0.5)}px`;
+});
     
   } //end bracket for function MUST BE AT THE END
   

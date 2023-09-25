@@ -314,9 +314,14 @@ margin: auto;
       text-decoration: underline;
   }
   
-  canvas {
-    width: 100%; /* or any percentage you prefer */
-    height: auto;
+  #loanChartContainer {
+    width: 100%; /* Width is 100% of its parent element */
+    position: relative; /* Needed for absolute positioning of the canvas */
+}
+
+#loanChart {
+    width: 100%; /* Width is 100% of its parent element */
+    height: 50%; /* Initial height set to 50% of width */
 }
   .table-container1 {
     display: flex;

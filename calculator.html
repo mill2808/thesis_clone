@@ -161,7 +161,7 @@
 <canvas id="cashFlowChart" width="300" height="100"></canvas>
 
 <h3>Comparison of Different Federal Tax Credit Rates (percent of installation cost)</h3>
-<canvas id="taxCreditCashFlowChart" width="300" height="100"></canvas>
+<canvas id="taxCreditCashFlowChart" style="width: 100%;"></canvas>
 
 <table class=table5>
   <th colspan="5">Loan Information</th>
@@ -194,7 +194,10 @@
 
 
 <h3>Loan Schedule</h3>
-<canvas id="loanChart"></canvas>
+<div id="loanChartContainer">
+  <canvas id="loanChart"></canvas>
+</div>
+
 </div>
     <script src="calculator.js"></script>
 </body>
