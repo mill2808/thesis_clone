@@ -44,7 +44,7 @@ function returnText() {
   let panelWattage = (smallConfiguration<=squareFeet) ? 150 : 370; // if small panels chosen, wattage is 150
   let panelConfiguration = (smallConfiguration<=squareFeet) ? smallConfiguration : largeConfiguration; 
   if (panelConfiguration > squareFeet) {
-    alert("To produce that much electricity, the size of this solar array will need to be larger than the square footage you have available. See TOtal Panel Configuration to see how many square feet it would require. Then refresh the page and try a smaller percent of your electricity consumption, or find more space that could hold solar panels to increase your square footage.")
+    alert("To produce that much electricity, the size of this solar array will need to be larger than the square footage you have available. See Total Panel Configuration to see how many square feet it would require. Then refresh the page and try a smaller percent of your electricity consumption, or find more space that could hold solar panels to increase your square footage.")
   }
     
   //// Cost of installation //////////////////////////////////////
@@ -422,7 +422,7 @@ function returnText() {
       data: cashFlowData,
       options: {
         responsive: true,
-        //maintainAspectRatio: false,
+        maintainAspectRatio: false,
         scales: {
          x: {
           display: true,
