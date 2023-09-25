@@ -595,15 +595,15 @@ function returnText() {
     
   //////////// Make graphs readable on phone screens ////////////////////////
   // cash flow graph
-  const canvas1 = document.getElementById('cashFlowChart');
-  const container1 = document.getElementById('cashFlowChartContainer');
+  const canvasCash = document.getElementById('cashFlowChart');
+  const containerCash = document.getElementById('cashFlowChartContainer');
 
-// Set initial height based on 50% of the width
-  canvas1.style.height = `${(cashFlowChartContainer.offsetWidth * 0.6)}px`;
+  // Set initial height based on 50% of the width
+  canvasCash.style.height = `${(cashFlowChartContainer.offsetWidth * 0.6)}px`;
 
 window.addEventListener('resize', () => {
     // Update height when window is resized
-    canvas1.style.height = `${(cashFlowChartContainer.offsetWidth * 0.6)}px`;
+    canvasCash.style.height = `${(cashFlowChartContainer.offsetWidth * 0.6)}px`;
 });
 
 
@@ -612,11 +612,11 @@ window.addEventListener('resize', () => {
   const container = document.getElementById('loanChartContainer');
 
 // Set initial height based on 50% of the width
-  canvas.style.height = `${(loanChartContainer.offsetWidth * 0.6)}px`;
+  canvas.style.height = `${(loanChartContainer.offsetWidth * 0.2)}px`;
 
 window.addEventListener('resize', () => {
     // Update height when window is resized
-    canvas.style.height = `${(loanChartContainer.offsetWidth * 0.6)}px`;
+    canvas.style.height = `${(loanChartContainer.offsetWidth * 0.2)}px`;
 });
     
 
