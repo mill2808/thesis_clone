@@ -333,12 +333,16 @@ margin: auto;
     /*width: 100%; /* Width is 100% of its parent element */
     /*height: 20%; /* Initial height set to 60% of width */
   
-    @media screen and (max-width: 900px) {
-      .loanChartContainer {
-        height: 300px;
-      }
-    }
+.loanChartContainer {
+  width:100%;
+  position: relative;
+}
 
+.loanChartContainer::before {
+  content: '';
+  display: block;
+  padding-top: 50%;
+}
 
   .table-container1 {
     display: flex;
