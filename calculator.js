@@ -605,6 +605,15 @@ window.addEventListener('resize', () => {
     canvas.style.height = `${(loanChartContainer.offsetWidth * 0.6)}px`;
 });
     
+const tableRow = document.querySelector('.table-row');
+tableRow.addEventListener('click', () => {
+  tableRow.classList.toggle('active');
+});
+
+
+
+
+
   } //end bracket for function MUST BE AT THE END
   
   
