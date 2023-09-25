@@ -405,10 +405,11 @@ margin: auto;
   /* Initial styles for the table row */
 .table-row {
   background-color: white;
+  transition: background-color 0.3s ease;
 }
 
 /* Styles for the hover effect */
-.table-row:hover {
+.table-row.active{
   background-color: gray;
 }
 /*** make hover work with tap on iphone ***/
@@ -421,7 +422,7 @@ margin: auto;
   border-radius: 5px;
 }
 
-.table-row:hover .tooltip {
+.table-row.active .tooltip {
   display: block;
 }
 
