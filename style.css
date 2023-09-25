@@ -394,6 +394,11 @@ margin: auto;
     background-color: #DADEDF;
   }  
 
+  @media screen and (max-width: 900px) {
+    .cashFlowChartContainer {
+      height:100%;
+    }
+  }
 
   /*************************** Funding Page Styling *************************/
  
