@@ -321,7 +321,7 @@ margin: auto;
 
 #loanChart {
     width: 100%; /* Width is 100% of its parent element */
-    height: 50%; /* Initial height set to 50% of width */
+    height: 60%; /* Initial height set to 60% of width */
 }
   .table-container1 {
     display: flex;
