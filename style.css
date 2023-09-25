@@ -314,19 +314,29 @@ margin: auto;
       text-decoration: underline;
   }
   
+  #cashFlowChartContainer {
+    width: 100%; /* Width is 100% of its parent element */
+    position: relative; /* Needed for absolute positioning of the canvas */
+  }
+
+  #cashFlowChart {
+    width: 100%; /* Width is 100% of its parent element */
+    height: 60%; /* Initial height set to 60% of width */
+  }
+
   #loanChartContainer {
     width: 100%; /* Width is 100% of its parent element */
     position: relative; /* Needed for absolute positioning of the canvas */
-}
+  }
 
-#loanChart {
+  #loanChart {
     width: 100%; /* Width is 100% of its parent element */
     height: 60%; /* Initial height set to 60% of width */
-}
+  }
+
   .table-container1 {
     display: flex;
     flex-wrap: wrap;
-    padding: 5px;
   }
   
   .table1 {
@@ -353,7 +363,6 @@ margin: auto;
   .table-container2 {
     display: flex;
     flex-wrap: wrap;
-    padding: 5px;
   }
   
   .table3 {
@@ -378,9 +387,13 @@ margin: auto;
   }
   
   .table5 {
-    padding: 10%;
     width:100%;
+    padding: 0 20% 0 20%;
   }
+  @media screen and (max-width: 900px) {
+    .table5 {
+      width:100%;
+    }}
   
   th {
     color: white;

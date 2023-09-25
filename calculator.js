@@ -593,7 +593,21 @@ function returnText() {
       }
   });
     
-  // Make graphs readable on phone screens 
+  //////////// Make graphs readable on phone screens ////////////////////////
+  // cash flow graph
+  const canvas1 = document.getElementById('cashFlowChart');
+  const container1 = document.getElementById('cashFlowChartContainer');
+
+// Set initial height based on 50% of the width
+  canvas1.style.height = `${(cashFlowChartContainer.offsetWidth * 0.6)}px`;
+
+window.addEventListener('resize', () => {
+    // Update height when window is resized
+    canvas1.style.height = `${(cashFlowChartContainer.offsetWidth * 0.6)}px`;
+});
+
+
+  //loan graph
   const canvas = document.getElementById('loanChart');
   const container = document.getElementById('loanChartContainer');
 
