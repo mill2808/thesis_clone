@@ -46,7 +46,10 @@ function returnText() {
   if (panelConfiguration > squareFeet) {
     alert("To produce that much electricity, the size of this solar array will need to be larger than the square footage you have available. See Total Panel Configuration to see how many square feet it would require. Then refresh the page and try a smaller percent of your electricity consumption, or find more space that could hold solar panels to increase your square footage.")
   }
-    
+  if (panelConfiguration < squareFeet) {
+    alert("Please scroll down to see the results")
+  }  
+
   //// Cost of installation //////////////////////////////////////
   let systemSize = numberPanels * panelWattage;
   let costPerWatt = (systemSize<="20000") ? "2.95":"1.84"; 
