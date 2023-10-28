@@ -234,7 +234,7 @@ function returnText() {
 
     let yearlySavings = (benefit2+benefit3+benefit4+benefit5+benefit6+benefit7+benefit8+benefit9+benefit10+benefit11+benefit12+benefit13+benefit14+benefit15+benefit16+benefit17+benefit18+benefit19+benefit20+benefit21+benefit22+benefit23+benefit24+benefit25) / 24;
     
-    let monthlySavings = yearlySavings / 12; 
+    //let monthlySavings = yearlySavings / 12; 
 
     let annualCashFlow = ((benefit2+benefit3+benefit4+benefit5+benefit6+benefit7+benefit8+benefit9+benefit10+benefit11+benefit12+benefit13+benefit14+benefit15+benefit16+benefit17+benefit18+benefit19+benefit20+benefit21+benefit22+benefit23+benefit24+benefit25) - (24*annualMaintenance) - (24*annualDegradation) - (24*annualDepreciation))/ 24;
     
@@ -339,6 +339,7 @@ function returnText() {
     };
   }
     
+  let annualDifference = annualCashFlow - yearlyPayment;
     
   ///////// Display results ///////////////////////////////////////////////////////////////////
     var numberCowsResult = document.getElementById("result1");
@@ -401,10 +402,12 @@ function returnText() {
   monthlyLoanPaymentResult.innerHTML = Math.round(monthlyPayment);
   var annualSavingsResult = document.getElementById("result28");
     annualSavingsResult.innerHTML = Math.round(yearlySavings);
-  var monthlySavingsResult = document.getElementById("result29");
-    monthlySavingsResult.innerHTML = Math.round(monthlySavings);
-    var annualCashFlowResult = document.getElementById("result30");
+  //var monthlySavingsResult = document.getElementById("result29");
+    //monthlySavingsResult.innerHTML = Math.round(monthlySavings);
+  var annualCashFlowResult = document.getElementById("result30");
     annualCashFlowResult.innerHTML = Math.round(annualCashFlow);
+  var annualDifferenceResult = document.getElementById("result31");
+    annualDifferenceResult.innerHTML = Math.round(annualDifference);
    
 
 
