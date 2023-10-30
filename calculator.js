@@ -9,7 +9,7 @@ function returnText() {
     let annualElectricityConsumption = document.getElementById('annualElectricityInput').value;
     if (annualElectricityConsumption === '') {
       annualElectricityConsumption = 991.283*numberCows**0.932; 
-      ///switch name to add Consumption when ready
+      ///switch name to add consumption when ready
     }
       let loanInterest = document.getElementById('loanInterestInput').value;
     if (loanInterest === '') {
