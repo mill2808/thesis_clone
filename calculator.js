@@ -50,6 +50,14 @@ function returnText() {
     alert("Please scroll down to see the results")
   }  
 
+  if (numberCows <30) {
+    alert("Since you have input less than 30 cows on your farm, this model cannot accurately predict your annual electricity consumption. Please ensure you input your annual electricity consumption based on your electricity bills.")
+  }
+
+  if (numberCows >1600) {
+    alert("Since you have more than 1600 cows on your farm, this model cannot accurately predict your annual electricity consumption. Please ensure you input your annual electricity consumption based on your electricity bills.")
+  }
+
   //// Cost of installation //////////////////////////////////////
   let systemSize = numberPanels * panelWattage;
   let costPerWatt = (systemSize<="20000") ? "2.95":"1.84"; 
