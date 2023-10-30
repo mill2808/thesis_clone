@@ -348,7 +348,36 @@ function returnText() {
   }
     
   let annualDifference = annualCashFlow - yearlyPayment;
-    
+   
+    ///// cumulative cashflow including loan payments /////////////////////////////////////////
+    let loanCashFlow0 = 0-annualInsurance;
+    let loanCashFlow1 = loanCashFlow0+(electricityRate1*generation1+taxCredit30)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow2 = loanCashFlow1+(electricityRate2*generation2)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow3 = loanCashFlow2+(electricityRate3*generation3)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow4 = loanCashFlow3+(electricityRate4*generation4)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow5 = loanCashFlow4+(electricityRate5*generation5)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow6 = loanCashFlow5+(electricityRate6*generation6)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow7 = loanCashFlow6+(electricityRate7*generation7)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow8 = loanCashFlow7+(electricityRate8*generation8)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow9 = loanCashFlow8+(electricityRate9*generation9)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow10 = loanCashFlow9+(electricityRate10*generation10)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow11 = loanCashFlow10+(electricityRate11*generation11)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow12 = loanCashFlow11+(electricityRate12*generation12)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow13 = loanCashFlow12+(electricityRate13*generation13)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow14 = loanCashFlow13+(electricityRate14*generation14)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow15 = loanCashFlow14+(electricityRate15*generation15)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow16 = loanCashFlow15+(electricityRate16*generation16)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow17 = loanCashFlow16+(electricityRate17*generation17)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow18 = loanCashFlow17+(electricityRate18*generation18)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow19 = loanCashFlow18+(electricityRate19*generation19)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow20 = loanCashFlow19+(electricityRate20*generation20)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow21 = loanCashFlow20+(electricityRate21*generation21)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow22 = loanCashFlow21+(electricityRate22*generation22)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow23 = loanCashFlow22+(electricityRate23*generation23)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow24 = loanCashFlow23+(electricityRate24*generation24)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+    let loanCashFlow25 = loanCashFlow24+(electricityRate25*generation25)-annualInsurance-annualMaintenance-annualDepreciation-yearlyPayment;
+
+
   ///////// Display results ///////////////////////////////////////////////////////////////////
     var numberCowsResult = document.getElementById("result1");
   numberCowsResult.innerHTML = numberCows;
@@ -625,6 +654,76 @@ function returnText() {
       }
       }
   });
+ //// line graph of cash flows plus loan payment //////////////////////////////////////////
+ var loanCashFlowData = {
+  labels: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"],
+  datasets: [
+        {
+          label: "Cumulative Cash Flow Without Loan",
+          data: [cashFlow0, cashFlow1, cashFlow2, cashFlow3, cashFlow4, cashFlow5,cashFlow6, cashFlow7, cashFlow8, cashFlow9, cashFlow10,cashFlow11, cashFlow12, cashFlow13, cashFlow14, cashFlow15,cashFlow16, cashFlow17, cashFlow18, cashFlow19, cashFlow20,cashFlow21, cashFlow22, cashFlow23, cashFlow24, cashFlow25],
+          fill: false,
+          borderColor: "rgb(75, 192, 192)",
+          lineTension: 0.1
+        },  
+      {
+          label: "Cumulative Cash Flow With Loan Payments",
+          data: [loanCashFlow0, loanCashFlow1, loanCashFlow2, loanCashFlow3, loanCashFlow4, loanCashFlow5,loanCashFlow6, loanCashFlow7, loanCashFlow8, loanCashFlow9, loanCashFlow10,loanCashFlow11, loanCashFlow12, loanCashFlow13, loanCashFlow14, loanCashFlow15,loanCashFlow16, loanCashFlow17, loanCashFlow18, loanCashFlow19, loanCashFlow20,loanCashFlow21, loanCashFlow22, loanCashFlow23, loanCashFlow24, loanCashFlow25],
+          fill: false,
+          borderColor: "rgb(255, 99, 132)",
+          lineTension: 0.1
+      },
+          {
+          label: "Breakeven Point",
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          fill: false,
+          borderColor: "rgb(192,192,192)",
+          lineTension: 0.05
+      }]
+};
+
+var cumulativeLoanCashFlow = document.getElementById('loanCashFlowChart').getContext('2d');
+var loanCashFlowChart = new Chart(cumulativeLoanCashFlow, {
+  type: 'line',
+  data: loanCashFlowData,
+  options: {
+    responsive: true,
+    //maintainAspectRatio: false,
+    scales: {
+     x: {
+      display: true,
+      title: {
+        display: true,
+        text: 'Years After Installation',
+        color: '#939799',
+        font: {
+          family: 'Times',
+          size: 20,
+          weight: 'bold',
+          lineHeight: 1.2,
+        },
+        padding: {top: 20, left: 0, right: 0, bottom: 0}
+      }
+    },
+    y: {
+      display: true,
+      title: {
+        display: true,
+        text: 'Cash Flow (dollars)',
+        color: '#939799',
+        font: {
+          family: 'Times',
+          size: 20,
+          weight: 'bold',
+          lineHeight: 1.2
+        },
+        padding: {top: 30, left: 0, right: 0, bottom: 0}
+      }
+    }
+  }
+},
+});
+
+
     
   //////////// Make graphs readable on phone screens ////////////////////////
   // cash flow graph
@@ -633,6 +732,15 @@ function returnText() {
 
   // Set initial height based on 50% of the width
   canvasCash.style.height = `${(cashFlowChartContainer.offsetWidth * 0.4)}px`;
+
+
+ // loan cash flow graph
+// const canvasLoanCash = document.getElementById('loanCashFlowChart');
+ //const containerLoanCash = document.getElementById('loanCashFlowChartContainer');
+
+ // Set initial height based on 50% of the width
+ //canvasLoanCash.style.height = `${(loanCashFlowChartContainer.offsetWidth * 0.8)}px`;
+
 
 
 
