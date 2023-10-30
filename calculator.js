@@ -448,6 +448,7 @@ function returnText() {
   };
   
     var cumulativeCashFlow = document.getElementById('cashFlowChart').getContext('2d');
+    //cumulativeCashFlow.canvas.style.width = '80%';
   var cashFlowChart = new Chart(cumulativeCashFlow, {
       type: 'line',
       data: cashFlowData,
@@ -524,6 +525,7 @@ function returnText() {
   };
   
     var taxCreditCashFlow = document.getElementById('taxCreditCashFlowChart').getContext('2d');
+    //taxCreditCashFlow.canvas.style.width = '80%';
   var taxFlowChart = new Chart(taxCreditCashFlow, {
       type: 'line',
       data: taxCreditData,
@@ -630,16 +632,16 @@ function returnText() {
   const containerCash = document.getElementById('cashFlowChartContainer');
 
   // Set initial height based on 50% of the width
-  canvasCash.style.height = `${(cashFlowChartContainer.offsetWidth * 0.6)}px`;
+  canvasCash.style.height = `${(cashFlowChartContainer.offsetWidth * 0.4)}px`;
 
 
 
   //loan graph
-  const canvas = document.getElementById('loanChart');
-  const container = document.getElementById('loanChartContainer');
+  //const canvas = document.getElementById('loanChart');
+  //const container = document.getElementById('loanChartContainer');
 
 // Set initial height based on 50% of the width
- canvas.style.height = `${(loanChartContainer.offsetWidth * 0.5)}px`;
+ //canvas.style.height = `${(loanChartContainer.offsetWidth * 0.5)}px`;
 
 
     
